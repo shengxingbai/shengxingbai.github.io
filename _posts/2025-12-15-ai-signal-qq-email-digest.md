@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 用 WorkBuddy 安装 ai-signal，每天把最新 AI 资讯推送到 QQ 邮箱
+title: 如何借助AI跟踪最新AI前沿技术与新闻？
 date: 2025-12-15
 categories: [技术]
 pinned: true
