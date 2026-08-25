@@ -12,3 +12,6 @@ vendor/
 *.swp
 .idea/
 .vscode/
+
+# 本地设计预览（非站点内容）
+_preview/
