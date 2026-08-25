@@ -12,7 +12,7 @@ url: ""   # 自定义域名时填写，如 https://yourdomain.com；否则留空
 
 # 构建配置
 markdown: kramdown
-permalink: pretty          # 文章链接形如 /2024/01/15/标题/
+# 默认固定链接：页面为 /xxx.html，文章为 /2024/01/15/slug.html（不含分类段，URL 更规整）
 exclude:
   - README.md
   - Gemfile

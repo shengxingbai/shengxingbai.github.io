@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>博客 · 您的姓名</title>
+  <meta name="description" content="文章列表，支持按分类筛选。">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+  <nav class="nav container">
+    <a class="site-title" href="/">您的姓名</a>
+    <button class="nav-toggle" aria-label="切换菜单" aria-expanded="false">&#9776;</button>
+    <ul class="nav-links">
+      <li><a href="/">首页</a></li>
+      <li><a href="/resume/">简历</a></li>
+      <li><a href="/blog/" class="active">博客</a></li>
+      <li><a href="/honors/">荣誉</a></li>
+    </ul>
+  </nav>
+</header>
+
+  <main class="container main-content">
+    <h1 class="page-title">博客文章</h1>
+
+<div class="category-filter" id="categoryFilter">
+  <button class="filter-btn active" data-category="all">全部</button>
+  
+  <button class="filter-btn" data-category="随笔">随笔（2）</button>
+  
+  <button class="filter-btn" data-category="科研">科研（1）</button>
+  
+  <button class="filter-btn" data-category="读书">读书（1）</button>
+  
+</div>
+
+<ul class="post-list">
+  
+  <li class="post-item" data-category="读书随笔">
+    <span class="post-date">2024-06-20</span>
+    <a class="post-link" href="/%E8%AF%BB%E4%B9%A6/%E9%9A%8F%E7%AC%94/2024/06/20/reading-share/">读书分享：近期读的几本好书</a>
+    <div class="post-tags">
+      <span class="tag">读书</span><span class="tag">随笔</span>
+    </div>
+    <p class="post-excerpt">分享近期阅读中给我留下印象的几本书。
+
+</p>
+  </li>
+  
+  <li class="post-item" data-category="科研">
+    <span class="post-date">2024-03-10</span>
+    <a class="post-link" href="/%E7%A7%91%E7%A0%94/2024/03/10/research-notes/">科研笔记：关于某某方法的一些思考</a>
+    <div class="post-tags">
+      <span class="tag">科研</span>
+    </div>
+    <p class="post-excerpt">记录近期在某某方向上的学习与实验心得。
+
+</p>
+  </li>
+  
+  <li class="post-item" data-category="随笔">
+    <span class="post-date">2024-01-15</span>
+    <a class="post-link" href="/%E9%9A%8F%E7%AC%94/2024/01/15/welcome/">欢迎来到我的个人博客</a>
+    <div class="post-tags">
+      <span class="tag">随笔</span>
+    </div>
+    <p class="post-excerpt">这是本站的第一篇文章，用来演示博客模块的基本结构。
+
+</p>
+  </li>
+  
+</ul>
+
+
+
+  </main>
+  <footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 您的姓名. 基于 <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> 构建。</p>
+    <p class="footer-meta">本站点为静态网站，内容可自由修改与再发布。</p>
+  </div>
+</footer>
+
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>
