@@ -1,0 +1,12 @@
+<header class="site-header">
+  <nav class="nav container">
+    <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+    <button class="nav-toggle" aria-label="切换菜单" aria-expanded="false">&#9776;</button>
+    <ul class="nav-links">
+      <li><a href="{{ '/' | relative_url }}"{% if page.url == '/' %} class="active"{% endif %}>首页</a></li>
+      <li><a href="{{ '/resume.html' | relative_url }}"{% if page.url == '/resume.html' %} class="active"{% endif %}>简历</a></li>
+      <li><a href="{{ '/blog.html' | relative_url }}"{% if page.url == '/blog.html' %} class="active"{% endif %}>博客</a></li>
+      <li><a href="{{ '/honors.html' | relative_url }}"{% if page.url == '/honors.html' %} class="active"{% endif %}>荣誉</a></li>
+    </ul>
+  </nav>
+</header>

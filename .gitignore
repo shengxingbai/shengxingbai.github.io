@@ -1,0 +1,14 @@
+# Jekyll 生成目录
+_site/
+.jekyll-cache/
+.jekyll-metadata
+
+# 依赖
+vendor/
+.bundle/
+
+# 编辑器 / 系统
+.DS_Store
+*.swp
+.idea/
+.vscode/

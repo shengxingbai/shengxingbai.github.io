@@ -1,0 +1,20 @@
+---
+layout: default
+---
+<article class="post">
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title }}</h1>
+    <p class="post-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y年%m月%d日" }}</time>
+      {% if page.categories.size > 0 %} · 分类：
+        {% for cat in page.categories %}<span class="tag">{{ cat }}</span>{% endfor %}
+      {% endif %}
+    </p>
+  </header>
+
+  <div class="post-content">
+    {{ content }}
+  </div>
+
+  <p class="back-link"><a href="{{ '/blog.html' | relative_url }}">&larr; 返回博客列表</a></p>
+</article>

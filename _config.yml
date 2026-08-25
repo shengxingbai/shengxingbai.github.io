@@ -1,0 +1,20 @@
+# ----- 站点基础信息（请按需要修改）-----
+title: 您的姓名
+description: 个人学术主页 · 简历 · 博客 · 荣誉
+author: 您的姓名
+lang: zh-CN
+
+# 部署相关
+# 用户站点（仓库名为 <username>.github.io）时 baseurl 留空 ""。
+# 项目站点（仓库名为其它名称）时，baseurl 填 "/<仓库名>"，例如 "/my-blog"。
+baseurl: ""
+url: ""   # 自定义域名时填写，如 https://yourdomain.com；否则留空
+
+# 构建配置
+markdown: kramdown
+permalink: pretty          # 文章链接形如 /2024/01/15/标题/
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
