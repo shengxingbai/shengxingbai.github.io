@@ -12,7 +12,8 @@ url: ""   # 自定义域名时填写，如 https://yourdomain.com；否则留空
 
 # 构建配置
 markdown: kramdown
-# 默认固定链接：页面为 /xxx.html，文章为 /2024/01/15/slug.html（不含分类段，URL 更规整）
+# 固定链接：页面 /xxx.html，文章 /2024/01/15/slug.html（不含分类段，URL 更规整）
+permalink: /:year/:month/:day/:title.html
 exclude:
   - README.md
   - Gemfile
