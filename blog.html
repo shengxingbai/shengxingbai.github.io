@@ -18,7 +18,7 @@ description: 文章列表，支持按分类筛选。
 
 <ul class="post-list">
   {% for post in ordered_posts %}
-  <li class="post-item" data-category="{% for c in post.categories %}{{ c }}{% unless forloop.last %} {% endunless %}{% endfor %}">
+  <li class="post-item" data-category="{{ post.categories | join: ' ' }}">
     <span class="post-date">{{ post.date | date: "%Y-%m-%d" }}</span>
     <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
     {% if post.pinned %}<span class="pinned-badge">置顶</span>{% endif %}
