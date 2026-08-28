@@ -259,6 +259,48 @@ section { margin-bottom: 40px; }
 }
 .back-link { margin-top: 32px; }
 
+/* ---------------- 文章目录（TOC）侧边导航 ---------------- */
+.post-layout { display: flex; gap: 36px; align-items: flex-start; }
+.toc-sidebar { flex: 0 0 220px; align-self: stretch; }
+.toc {
+  position: sticky;
+  top: 84px;                 /* 让出 sticky 顶部导航(60px)并留出余量 */
+  max-height: calc(100vh - 104px);
+  overflow-y: auto;
+  padding: 2px 0;
+}
+.toc-title {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--color-accent);
+  margin: 0 0 10px;
+}
+.toc-list, .toc-sublist { list-style: none; margin: 0; padding: 0; }
+.toc-sublist { margin: 2px 0 2px; }
+.toc-link {
+  display: block;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: var(--color-muted);
+  padding: 4px 0 4px 12px;
+  margin-left: -2px;
+  border-left: 2px solid transparent;
+  transition: color .15s ease, border-color .15s ease;
+  word-break: break-word;
+}
+.toc-sublist .toc-link { padding-left: 26px; font-size: 0.84rem; }
+.toc-link:hover { color: var(--color-accent); text-decoration: none; }
+.toc-link.active {
+  color: var(--color-accent);
+  border-left-color: var(--color-accent);
+  font-weight: 500;
+}
+/* 锚点跳转时不被 sticky 头部遮挡 */
+.post-content h2, .post-content h3 { scroll-margin-top: 84px; }
+/* 文章页加宽，给左侧目录让出空间 */
+body.layout-post .main-content { max-width: 1080px; }
+
 /* ---------------- 荣誉 ---------------- */
 .honor-group { margin-bottom: 36px; }
 .honor-group h2 { font-size: 1.4rem; border-bottom: 1px solid var(--color-border); padding-bottom: 8px; }
@@ -319,4 +361,11 @@ section { margin-bottom: 40px; }
   .nav-links li { padding: 6px 0; }
   .main-content { padding: 32px 20px 48px; }
   .hero h1 { font-size: 1.8rem; }
+}
+
+/* 窄屏：目录改为顶部可折叠区块（此处直接隐藏，保证正文阅读宽度） */
+@media (max-width: 768px) {
+  .post-layout { display: block; }
+  .toc-sidebar { display: none; }
+  body.layout-post .main-content { max-width: var(--max-width); }
 }
