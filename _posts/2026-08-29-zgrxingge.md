@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "《中国人的性格》详细读书笔记"
-date: 2026-08-29
+date: 2022-08-29
 categories: [读书]
 ---
 
