@@ -17,5 +17,49 @@
   </main>
   {% include footer.html %}
   <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+
+  {%- if page.layout == 'post' -%}
+  <!-- Mermaid 图表渲染：把 kramdown 生成的 code.language-mermaid 转为 .mermaid 容器再渲染 -->
+  <script defer src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+  <script defer>
+    (function () {
+      function renderMermaid() {
+        if (!window.mermaid) return;
+        var nodes = document.querySelectorAll('code.language-mermaid');
+        nodes.forEach(function (el) {
+          var pre = el.closest('pre') || el.parentNode;
+          var div = document.createElement('div');
+          div.className = 'mermaid';
+          div.textContent = el.textContent;
+          pre.parentNode.replaceChild(div, pre);
+        });
+        mermaid.initialize({
+          startOnLoad: false,
+          theme: 'base',
+          securityLevel: 'loose',
+          fontFamily: '"Noto Sans SC", -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif',
+          themeVariables: {
+            primaryColor: '#ffffff',
+            primaryTextColor: '#2b2b2b',
+            primaryBorderColor: '#1f3a5f',
+            lineColor: '#1f3a5f',
+            secondaryColor: '#eef2f7',
+            tertiaryColor: '#ffffff',
+            background: 'transparent',
+            mainBkg: '#ffffff',
+            nodeBorder: '#1f3a5f',
+            clusterBkg: '#eef2f7',
+            clusterBorder: '#1f3a5f',
+            edgeLabelBackground: '#fbfbf9',
+            titleColor: '#1f3a5f'
+          }
+        });
+        mermaid.run();
+      }
+      if (window.mermaid) { renderMermaid(); }
+      else { window.addEventListener('load', renderMermaid); }
+    })();
+  </script>
+  {%- endif -%}
 </body>
 </html>

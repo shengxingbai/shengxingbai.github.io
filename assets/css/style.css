@@ -369,3 +369,14 @@ body.layout-post .main-content { max-width: 1080px; }
   .toc-sidebar { display: none; }
   body.layout-post .main-content { max-width: var(--max-width); }
 }
+
+/* Mermaid 图表：居中显示、横向溢出可滚动、SVG 自适应宽度 */
+.mermaid {
+  text-align: center;
+  margin: 1.75rem 0;
+  overflow-x: auto;
+}
+.mermaid svg {
+  max-width: 100%;
+  height: auto;
+}
